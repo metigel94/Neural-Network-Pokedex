@@ -21,24 +21,25 @@ public class playerInteract : MonoBehaviour
         for(int i = 0; i < pokeList.Length; i++){
             if(Vector3.Distance(pokeList[i].transform.position, this.gameObject.transform.position) < 5){
                 if(Input.GetButtonDown("Jump")){
-                    if (this.gameObject.name == "PokemonCube")
+                    if (pokeList[i].gameObject.name == "PokemonCube")
                     {
                         pokenumber = 0;
                     }
-                    else if (this.gameObject.name == "PokemonCube (1)")
+                    else if (pokeList[i].gameObject.name == "PokemonCube (1)")
                     {
                         pokenumber = 1;
                     }
-                    else if (this.gameObject.name == "PokemonCube (2)")
+                    else if (pokeList[i].gameObject.name == "PokemonCube (2)")
                     {
                         pokenumber = 2;
                     }
-                    else if (this.gameObject.name == "PokemonCube (3)")
+                    else if (pokeList[i].gameObject.name == "PokemonCube (3)")
                     {
                         pokenumber = 3;
                     }
                     else
                     {
+                        Debug.Log(this.gameObject.name);
                         pokenumber = 4;
                     }
                     Debug.Log("It's a fuckin " + pokeList[i].GetComponent<pokeBoy>().pokemonName + " dude.");
