@@ -43,7 +43,7 @@ public class HelloRequester : RunAbleThread
                     }
                     if (gotMessage)
                     {
-                        //Debug.Log("Received " + message);
+                        Debug.Log("Received " + message);
 
                         // finalPath = finalStringPath.Select(s => int.Parse(s)).ToArray();
 

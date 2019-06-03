@@ -3,6 +3,8 @@ import zmq
 import os
 import server
 import threading
+import subprocess
+
 
 pokemon_images = ["python classify.py --model pokedex.model --labelbin lb.pickle --image examples/squirtle_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/bulbasaur_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/charmander_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/mewto_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/pikachu_meme.png"]
 
@@ -26,22 +28,25 @@ class Connection:
             #  Wait for next request from client
             message = socket.recv()
             #print("Received request: %s" % message)
-            print(Connection.pokemon_number)
+
+            message_copy = message.decode("utf-8")
 
             if(message != Connection.pokemon_number):
-                classify_pokemon(Connection.pokemon_number)
+                proc = subprocess.Popen(pokemon_images[int(message)], stdout=subprocess.PIPE, shell=True)
+                (out, err) = proc.communicate()
+                socket.send(out)
 
             Connection.pokemon_number = message.decode("utf-8")
-            
-            feedbackToUnity = Connection.pokemon_number
 
+            print(Connection.pokemon_number)
+            
             #  In the real world usage, you just need to replace time.sleep() with
             #  whatever work you want python to do.-
             #time.sleep(1)
 
             #  Send reply back to client
             #  In the real world usage, after you finish your work, send your output here
-            socket.send(b'test')
+            
 
 
 Connection.server()
