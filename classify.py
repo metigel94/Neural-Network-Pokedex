@@ -58,4 +58,4 @@ cv2.putText(output, label, (10, 25),  cv2.FONT_HERSHEY_SIMPLEX,
 # show the output image
 print("[INFO] {}".format(label))
 cv2.imshow("Output", output)
-cv2.waitKey(0)
+# cv2.waitKey(0)
