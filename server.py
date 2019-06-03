@@ -4,7 +4,7 @@ import os
 import server
 import threading
 
-pokemon_images = ["python classify.py --model pokedex.model --labelbin lb.pickle --image examples/charmander_counter.png", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/bulbasaur_plush.png", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/pikachu_meme.png", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/pikachu_toy.png"]
+pokemon_images = ["python classify.py --model pokedex.model --labelbin lb.pickle --image examples/squirtle_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/bulbasaur_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/charmander_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/mewto_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/pikachu_meme.png"]
 
 
 def classify_pokemon(index):
