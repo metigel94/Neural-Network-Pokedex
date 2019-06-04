@@ -150,7 +150,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49585672}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f69dfd9aea7ce9438d43a4fedfd1689, type: 3}
@@ -394,9 +394,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Current Pokedex:
-
-    No Pokemon found.'
+  m_Text: "Current Pok\xE9Dex:"
 --- !u!222 &304892255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -414,11 +412,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 304892252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c51fd5d4be5eb40b8017304b840b84, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aca347be7d970b4d899b9839cda0f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pokemonName: 
   Status: 
+  prevStatus: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +824,8 @@ PrefabInstance:
       propertyPath: pokemonName
       value: Bulbasaur
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6999724752250809174, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
 --- !u!1 &1345480794
 GameObject:
@@ -1053,7 +1053,8 @@ PrefabInstance:
       propertyPath: pokemonName
       value: Mewtwo
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6999724752250809174, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
 --- !u!1001 &1584471008
 PrefabInstance:
@@ -1132,7 +1133,8 @@ PrefabInstance:
       propertyPath: pokemonName
       value: Charmander
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6999724752250809174, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
 --- !u!1001 &1610092497
 PrefabInstance:
@@ -1211,7 +1213,8 @@ PrefabInstance:
       propertyPath: pokemonName
       value: Pikachu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6999724752250809174, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
 --- !u!1 &1954473183
 GameObject:
@@ -1411,5 +1414,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6999724752250809174, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 53b62e76a5fc4e5488ef20cbd8f87a46, type: 3}

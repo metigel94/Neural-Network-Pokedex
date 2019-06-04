@@ -9,9 +9,6 @@ import subprocess
 pokemon_images = ["python classify.py --model pokedex.model --labelbin lb.pickle --image examples/squirtle_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/bulbasaur_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/charmander_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/mewto_unity.jpg", "python classify.py --model pokedex.model --labelbin lb.pickle --image examples/pikachu_meme.png"]
 
 
-def classify_pokemon(index):
-    os.system(pokemon_images[int(index)])
-
 class Connection:
     pokemon_number = 0
 
@@ -28,8 +25,6 @@ class Connection:
             #  Wait for next request from client
             message = socket.recv()
             #print("Received request: %s" % message)
-
-            message_copy = message.decode("utf-8")
 
             if(message != Connection.pokemon_number):
                 proc = subprocess.Popen(pokemon_images[int(message)], stdout=subprocess.PIPE, shell=True)

@@ -16,7 +16,7 @@ public class HelloRequester : RunAbleThread
 {
     public string messageToSend;
     public static int[] finalPath;
-    string message = null;
+    public static string message = null;
 
     ///     Stop requesting when Running=false.
     protected override void Run()
@@ -45,7 +45,7 @@ public class HelloRequester : RunAbleThread
                     if (gotMessage)
                     {
                         Debug.Log("Received " + message);
-                        GameObject.Find("PokeDex").GetComponent<pokeBoy>().Status = GameObject.Find("PokeDex").GetComponent<pokeBoy>().Status +  "\n" + message; 
+                        //GameObject.Find("PokeDex").GetComponent<pokeBoy>().Status = GameObject.Find("PokeDex").GetComponent<pokeBoy>().Status +  "\n" + message; 
 
 
 

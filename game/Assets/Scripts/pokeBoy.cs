@@ -15,6 +15,6 @@ public class pokeBoy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<UnityEngine.UI.Text>().text = Status;
+        //gameObject.GetComponent<UnityEngine.UI.Text>().text = Status;
     }
 }
